@@ -1,7 +1,5 @@
 # Searching and Sorting in Arrays
 
-
-
 ### *Searching in Arrays*
 
 > 1. Linear Search
@@ -36,5 +34,70 @@ int binarySearch(int arr [], int n, int x) {
             r = m - 1;
     }
     return -1;
+}
+```
+
+### *Sorting in Arrays*
+
+> 1. Bubble Sort
+
+```cpp
+// Time Complexity:- O(N^2)
+// Auxiliary Space:- O(1) 
+
+void swap( int * x, int * y ) {
+    int temp = *x;
+    *y = *x;
+    *x = temp;
+}
+
+void bubbleSort( int arr [], int n ) {
+
+    for ( int i = 0; i < n-1; i++ ) {
+
+        int swapped = false;
+
+        for ( int j = 0; j < n-i-1; j++ ) {
+            if ( arr[j] > arr[j+1] ) { 
+                swap(arr[j], arr[j+1]);
+                swapped = true;
+            }
+        }
+
+        if ( swapped == false ) break;
+
+    }
+
+}
+```
+
+> 2. Insertion Sort
+
+```cpp
+// Time Complexity:- O(N^2) 
+// Auxiliary Space:- O(1)
+
+void swap( int * x, int * y ) {
+    int temp = *x;
+    *y = *x;
+    *x = temp;
+}
+
+void insertionSort( int arr [], int n ) {
+
+    for ( int i = 0; i < n - 1; i++ ) {
+
+        if ( arr[i] > arr[i+1] ) {
+
+            swap(arr[i], arr[i+1]);
+
+            for ( int j = i ; j >= 1; j-- ) {
+                if ( arr[j] < arr[j-1] ) swap(arr[j], arr[j-1]);   
+            }
+
+        }
+
+    }
+
 }
 ```
