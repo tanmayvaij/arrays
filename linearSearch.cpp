@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// Time Complexity:- O(N)
+// Auxiliary Space:- O(1)
+
 int linearSearch( int arr [], int n, int x ) {
     for ( int i = 0; i < n; i++ ) {
         if ( arr[i] == x ) return i;
