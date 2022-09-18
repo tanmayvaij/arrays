@@ -37,6 +37,8 @@ int binarySearch(int arr [], int n, int x) {
 }
 ```
 
+<br/>
+
 ### *Sorting in Arrays*
 
 > 1. Bubble Sort
